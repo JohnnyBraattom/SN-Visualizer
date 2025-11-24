@@ -136,7 +136,9 @@ def compute_segments(df: pd.DataFrame, segment_cols: List[str], traffic_cols: Li
 
         row = {
             "Segment": str(seg),
-            "Search Volume": df.loc[mask, "Search Volume"].fillna(0).astype(float).sum(),
+            "Traffic Potential": (
+                df.loc[mask, "Search Volume"].fillna(0).astype(float).sum() * 0.3
+            ),
         }
 
         # Add traffic per domain
