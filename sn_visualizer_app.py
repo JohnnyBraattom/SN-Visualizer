@@ -119,7 +119,7 @@ if uploaded_file is not None:
     st.divider()
 
     # Segment graph: Search Volume + traffic per domain, clustered (not stacked)
-    st.subheader("2. Search volume and traffic per segment")
+    st.subheader("2. Traffic potential and estimated traffic per segment")
     if segment_df.empty:
         st.info("No segment data found between 'Topic' and the first monthly column.")
     else:
